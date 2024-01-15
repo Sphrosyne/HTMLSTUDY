@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM</title>
+  </head>
+  <body>
+    <h1>JS DOM使用</h1>
+    <div class="box1">box1盒子</div>
+    <div id="box2">box2盒子</div>
+    <div>box3盒子</div>
+    <button>按钮</button>
+    <script>
+      // 根据类名取
+      var class_element = document.getElementsByClassName("box1")[0];
+      console.log(class_element);
+      class_element.innerText = "根据类名拿到 dom";
+      // 根据ID取
+      var id_element = document.getElementById("box2");
+      id_element.innerHTML = "<span>根据ID拿到 dom</span>";
+      // 根据标签取
+      var tag_element = document.getElementsByTagName("div");
+      console.log(tag_element);
+      tag_element[2].style.color = "blue";
+      // 添加事件
+      var button_element = document.getElementsByTagName("button");
+      //   button_element[0].onclick = function () {
+      //     alert("按钮事件触发");
+      //   };
+      button_element[0].addEventListener("click", function () {
+        alert("按钮事件通过addListener触发");
+      });
+    </script>
+  </body>
+</html>
