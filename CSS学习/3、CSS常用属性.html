@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS常用属性</title>
+    <style>
+        .block {
+            background-color: aqua;
+            height: 250px;
+            width: 200px;
+        }
+        .inline {
+            background-color: brown;
+        }
+        .inline-block {
+            height: 150px;
+            width: 150px;
+        }
+        .change-inline {
+            background-color: aqua;
+            height: 160px;
+            width: 100px;
+            display: inline;
+        }
+        .change-block {
+            background-color: chartreuse;
+            height: 50px;
+            width: 250px;
+            display: block;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="block">这是一个块级元素</div>
+    <span class="inline">这是一个行内元素</span>
+    <img src="../HTML学习/狐.png" alt="" class="inline-block">
+    <br>
+    <br>
+    <br>
+    
+    <!-- 块级元素、行内元素、行内块元素相互转换 -->
+    <div class="change-inline">块级别元素转行内元素</div>
+    <span class="change-block">行内元素转块级元素</span>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECharts</title>
+    <script src="./node_modules/echarts/dist/echarts.min.js"></script>
+</head>
+<style>#main {
+    height: 400px;
+    width: 600px;
+    background-color: orange;
+}
+</style>
+<body>
+<div id="main"></div>
+</body>
+<script>
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+option = {
+    title: [{text: 'Tangential Polar Bar Label Position (middle)'}],
+    polar: {radius: [30, '80%']},
+    angleAxis: {max: 4, startAngle: 75},
+    radiusAxis: {type: 'category', data: ['a', 'b', 'c', 'd']},
+    tooltip: {},
+    series: {
+        type: 'bar',
+        data: [2, 1.2, 2.4, 3.6],
+        coordinateSystem: 'polar',
+        label: {show: true, position: 'middle', formatter: '{b}: {c}'}
+    }
+};
+myChart.setOption(option);
+</script>
+</html>
