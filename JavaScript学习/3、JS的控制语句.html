@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS的控制语句</title>
+  </head>
+  <body>
+    <script>
+      let age = 16;
+      // if
+      if (age < 18) {
+        console.log("未成年");
+      } else {
+        console.log("成年");
+      }
+      // for循环
+      for (let index = 0; index < 4; index++) {
+        console.log("index--", index);
+      }
+
+      // while循环
+      while (age < 18) {
+        console.log("age--", age);
+        age++;
+      }
+
+      //   break和continue
+      for (let index = 0; index < 6; index++) {
+        if (index == 2) {
+          continue;
+        }
+        if (index == 4) {
+          break;
+        }
+        console.log("index--", index);
+      }
+    </script>
+  </body>
+</html>
