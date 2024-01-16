@@ -6,16 +6,39 @@
     <title>增删改练习</title>
     <style>
       table {
-        border: 1px solid;
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: auto;
       }
       tr {
       }
       th {
+        border: 1px solid black;
+        width: 300px;
+        height: 30px;
+      }
+      td {
+        border: 1px solid black;
+        width: 300px;
+        height: 30px;
+        text-align: center;
       }
     </style>
+    <script src="./js/crud.js"></script>
   </head>
   <body>
     <h1 style="text-align: center">增删改</h1>
+    <button
+      style="
+        margin-left: 220px;
+        width: 100px;
+        height: 30px;
+        background-color: aquamarine;
+      "
+      onclick="addData()"
+    >
+      新增数据
+    </button>
     <table>
       <tr>
         <th>姓名</th>
@@ -26,8 +49,13 @@
         <td>小时代</td>
         <td>123456789</td>
         <td>
-          <button>编辑</button>
-          <button>删除</button>
+          <button style="width: 100px" onclick="editData(this)">编辑</button>
+          <button
+            style="width: 100px; background-color: red"
+            onclick="deleteData(this)"
+          >
+            删除
+          </button>
         </td>
       </tr>
     </table>
