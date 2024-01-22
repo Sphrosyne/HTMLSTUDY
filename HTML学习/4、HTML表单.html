@@ -6,7 +6,15 @@
     <title>HTML表单</title>
   </head>
   <body>
-    <form action="#">
+    <!-- 例子1 -->
+    <form action="http://www.baidu.com/s" target="_blank">
+      <input type="text" name="wd" /> 去百度搜索
+      <button type="submit">提交</button>
+    </form>
+    <br />
+    <hr />
+    <!-- 例子2 -->
+    <form action="#" target="">
       <label for="username">用户名：</label>
       <input type="text" name="" id="username" placeholder="请输入名字" />
       <br />
@@ -17,15 +25,15 @@
       <br />
       <br />
       <label for="">性别：</label>
-      <input type="radio" name="gender" id="" />男
-      <input type="radio" name="gender" id="" />女
+      <input type="radio" name="gender" id="" value="male" checked />男
+      <input type="radio" name="gender" id="" value="female" />女
 
       <br />
       <br />
       <label for="">爱好：</label>
-      <input type="checkbox" name="hobby" id="" />打篮球
-      <input type="checkbox" name="hobby" id="" />踢足球
-      <input type="checkbox" name="hobby" id="" />打网球
+      <input type="checkbox" name="hobby" id="" value="smoke" />抽烟
+      <input type="checkbox" name="hobby" id="" value="drink" />喝酒
+      <input type="checkbox" name="hobby" id="" value="perm" checked />烫头
 
       <br />
       <br />
