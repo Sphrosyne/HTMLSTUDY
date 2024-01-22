@@ -15,29 +15,70 @@
     <hr />
     <!-- 例子2 -->
     <form action="#" target="">
-      <label for="username">用户名：</label>
-      <input type="text" name="" id="username" placeholder="请输入名字" />
-      <br />
-      <br />
-      <label for="passowrd">密码：</label>
-      <input type="password" name="" id="passowrd" placeholder="请输入密码" />
+      <fieldset>
+        <legend>主要信息</legend>
+        <label for="namex">用户：</label>
+        <input
+          type="text"
+          name="username"
+          id="namex"
+          placeholder="请输入名字"
+        />
+        <br />
+        <br />
+        <!-- label标签 关联 -->
+        <label
+          >密码：
+          <input type="password" name="passowrd" placeholder="请输入密码" />
+        </label>
+
+        <br />
+        <br />
+        <!-- 单选框 -->
+        <label for="">性别：</label>
+        <input type="radio" name="gender" id="" value="male" checked />男
+        <input type="radio" name="gender" id="" value="female" />女
+      </fieldset>
 
       <br />
       <br />
-      <label for="">性别：</label>
-      <input type="radio" name="gender" id="" value="male" checked />男
-      <input type="radio" name="gender" id="" value="female" />女
-
-      <br />
-      <br />
+      <!-- 多选框 -->
       <label for="">爱好：</label>
       <input type="checkbox" name="hobby" id="" value="smoke" />抽烟
       <input type="checkbox" name="hobby" id="" value="drink" />喝酒
       <input type="checkbox" name="hobby" id="" value="perm" checked />烫头
+      <!-- 隐藏域 -->
+      <input type="hidden" name="hiddenTag" value="123" />
+      <br />
+      <br />
+      <!-- 文本框 -->
+      <textarea name="tex" cols="30" rows="10"></textarea>
+      <br />
+      <br />
+      <!-- 下拉框 -->
+      <select name="place">
+        <option value="川">四川</option>
+        <option value="渝" selected>重庆</option>
+        <option value="">湖南</option>
+        <option value="粤">广东</option>
+      </select>
 
       <br />
       <br />
+      <!-- 提交方法一 -->
       <input type="submit" name="" id="" />
+      <!-- 提交方法二 -->
+      <button>提交</button>
+      <!-- 重置方法一 -->
+      <input type="reset" value="重置" />
+      <!-- 重置方法二 -->
+      <button type="reset">重置</button>
+
+      <!-- 普通按钮一 -->
+      <input type="button" name="test" id="" value="普通按钮一" />
+
+      <!-- 普通按钮二 -->
+      <button type="button" disabled>普通按钮二</button>
     </form>
   </body>
 </html>

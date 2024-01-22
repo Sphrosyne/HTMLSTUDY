@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iframe框架标签</title>
+  </head>
+  <body>
+    <!-- 利用iframe嵌入一个普通网页 -->
+    <iframe
+      src="https://www.taobao.com"
+      frameborder="1"
+      height="300"
+      width="800"
+    ></iframe>
+    <!-- 利用iframe嵌入一个广告网页 -->
+    <!-- 利用iframe嵌入pdf -->
+    <br />
+    <!-- 与超链接的target属性联合使用 -->
+    <a href="https://www.taobao.com" target="contx">逛淘宝</a>
+    <!-- 与form表单的target属性联合使用 -->
+    <form action="https://www.taobao.com" target="contx">
+      <input type="text" name="keyword" />
+      <input type="submit" value="搜索" />
+    </form>
+
+    <iframe frameborder="0" name="contx" height="100" width="300"> </iframe>
+  </body>
+</html>
