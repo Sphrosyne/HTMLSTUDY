@@ -27,11 +27,11 @@
       }
 
       /* 这是一个子类选择器 */
-      .father .son {
+      .father > .son {
         color: chartreuse;
       }
 
-      /* 这是一个后代选择器 */
+      /* 这是一个后代选择器 多层后代 层层使用*/
       .father p {
         color: chocolate;
       }
@@ -39,6 +39,29 @@
       /* 这是一个伪类选择器 */
       #yoo:hover {
         background-color: brown;
+      }
+
+      /* 交集选择器 h1和intersect的属性都用了*/
+      h1.intersect {
+        font-size: 50px;
+      }
+
+      /* 兄弟选择器 */
+      #brother {
+        color: brown;
+        font-size: 50px;
+      }
+      #brother + p {
+        color: gold;
+      }
+      #brother ~ p {
+        color: green;
+      }
+
+      /* 属性选择器 */
+      [title] {
+        color: red;
+        font-size: 30px;
       }
     </style>
   </head>
@@ -53,5 +76,24 @@
       </div>
     </div>
     <h4 id="yoo">这是一个伪类选择器</h4>
+
+    <h1 class="intersect">这是一个交集选择器</h1>
   </body>
+
+  <hr />
+  <br />
+  <!-- 兄弟选择器 -->
+  <div id="brother">上课了</div>
+  <p>英语课</p>
+  <p>语文课</p>
+  <p>数学课</p>
+  <p>体育课</p>
+
+  <hr />
+  <br />
+  <!-- 属性选择器 -->
+  <div title="x1">篮球</div>
+  <div title="x2">足球</div>
+  <div title="x3">网球</div>
+  <div title="x4">排球</div>
 </html>
