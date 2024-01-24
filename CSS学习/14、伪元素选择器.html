@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪元素选择器</title>
+    <style>
+      /* 选中div中的第一个字母 */
+      div::first-letter {
+        color: red;
+      }
+      /* 第一行 */
+      div::first-line {
+        background-color: yellow;
+      }
+      /* 选中的部分 */
+      div::selection {
+        background-color: green;
+        color: gold;
+      }
+      /* 输入框提示文字样式调整 */
+      input::placeholder {
+        color: cornflowerblue;
+      }
+      /* 标签内的内容 */
+      p::before {
+        content: "￥";
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, rem!
+      Illum neque eum quod odio voluptatibus. Iusto illum, error blanditiis ab
+      minus ipsum dolorum quia qui cupiditate et quos nulla est voluptatibus
+      molestiae aspernatur, consectetur consequuntur fugiat modi in iure?
+    </div>
+    <br />
+    <input type="text" placeholder="请输入想说的话" />
+    <br />
+    <br />
+    <p>199元</p>
+    <p>209元</p>
+    <p>399元</p>
+  </body>
+</html>
