@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器--否定伪类</title>
+    <style>
+      /* 排除第一个 */
+      /* div > p:not(:first-child) {
+        color: red;
+      } */
+      /* 排除类名是txx的 */
+      /* div > p:not(.txx) {
+        color: red;
+      } */
+
+      /* 排除title以哟西开头的 */
+      div > p:not([title^="哟西"]) {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>张三 95分</p>
+      <p>李四 40分</p>
+      <p title="哟西">王五 84分</p>
+      <p class="txx">赵六 78分</p>
+      <p class="txx">任七 83分</p>
+    </div>
+  </body>
+</html>

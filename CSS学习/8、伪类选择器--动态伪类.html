@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器--动态伪类</title>
+    <style>
+      /* 顺序很重要，否则会失效  LVHA */
+      /* 未点击过的链接 */
+      a:link {
+        color: red;
+      }
+      /* 访问过的链接 */
+      a:visited {
+        color: gold;
+      }
+      /* 鼠标悬浮在链接上的时候 */
+      a:hover {
+        color: skyblue;
+      }
+      /* 鼠标点击但未松开 */
+      a:active {
+        color: green;
+      }
+
+      /* hover和active基本上所有标签都有 */
+      span:hover {
+        color: blue;
+      }
+      span:active {
+        color: red;
+      }
+
+      /* 聚焦 */
+      input:focus {
+        color: gold;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.baidu.com">去百度</a>
+    <a href="https://www.jd.com">去京东</a>
+
+    <br />
+    <br />
+    <span>试试点击不松开</span>
+    <br />
+    <br />
+    <input type="text" />
+    <br />
+    <input type="text" />
+    <br />
+    <input type="text" />
+  </body>
+</html>

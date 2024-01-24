@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器--结构伪类</title>
+
+    <style>
+      /* 结构1 选中的是struct1的第一个子元素p*/
+      #struct1 > p:first-child {
+        color: red;
+      }
+
+      /* 选中的是struct1的最后一个子元素p */
+      #struct1 > p:last-child {
+        color: green;
+      }
+
+      /* 选中的是struct1的第三个子元素p */
+      /* 偶数 even 2n*/
+      /* 奇数 odd 2n+1*/
+      /* 前5个 -n+5 */
+      #struct1 > p:nth-child(3) {
+        color: gold;
+      }
+
+      /* 结构2 第一个子元素不是p */
+      #struct2 > p:first-child {
+        color: red;
+      }
+      /* 选中的是结构2中的p类型的第一个 */
+      #struct2 > p:first-of-type {
+        color: red;
+      }
+      /* 选中的是结构2中的p类型的第二个 */
+      #struct2 > p:nth-of-type(2) {
+        color: blue;
+      }
+      /* 选中倒数 nth-last-child()*/
+
+      /* 选中html的根元素  */
+      /* :root {
+        background-color: grey;
+      } */
+
+      /* 选中内部是空的div标签 空格也算 */
+      div:empty {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 结构1 -->
+    <div id="struct1">
+      <p>张三 95分</p>
+      <p>李四 40分</p>
+      <p>王五 84分</p>
+      <p>赵六 78分</p>
+    </div>
+    <hr />
+    <!-- 结构2 -->
+    <div id="struct2">
+      <span>张三 95分</span>
+      <p>李四 40分</p>
+      <p>王五 84分</p>
+      <p>赵六 78分</p>
+    </div>
+
+    <div></div>
+  </body>
+</html>

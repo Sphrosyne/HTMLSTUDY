@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>伪类选择器--UI伪类</title>
+    <style>
+      /* 勾选框是否勾选 */
+      input:checked {
+        width: 100px;
+        height: 100px;
+      }
+      /* 不可用的 */
+      input:disabled {
+        background-color: darkcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" name="" id="" />
+
+    <input type="radio" name="gender" />男
+    <input type="radio" name="gender" />女
+
+    <br />
+    <input type="text" />
+    <input type="text" disabled />
+  </body>
+</html>
