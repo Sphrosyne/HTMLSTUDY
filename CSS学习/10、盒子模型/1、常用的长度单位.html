@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>常用的长度单位</title>
+    <style>
+      /* 第一种长度单位  px */
+      #d1 {
+        height: 200px;
+        width: 200px;
+        font-size: 20px;
+        background-color: aqua;
+      }
+      /* 第二种长度单位 em(相当于当前元素的font-size的倍数) */
+      #d2 {
+        height: 10em;
+        width: 10em;
+        font-size: 20px;
+        background-color: gold;
+      }
+      /* 第三种长度单位 rem(相当于根元素的font-size的倍数) */
+      #d3 {
+        height: 10rem;
+        width: 10rem;
+        font-size: 20px;
+        background-color: red;
+      }
+      /* 第四种长度单位 %(相对于其父元素的百分比) */
+      #d4 {
+        height: 200px;
+        width: 200px;
+        font-size: 20px;
+        background-color: deeppink;
+      }
+      .inside {
+        height: 50%;
+        width: 25%;
+        font-size: 150%;
+        background-color: darkolivegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1">1</div>
+    <div id="d2">2</div>
+    <div id="d3">3</div>
+    <div id="d4">
+      4
+      <div class="inside">xxx</div>
+    </div>
+  </body>
+</html>
