@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>处理内容溢出</title>
+    <style>
+      #d1 {
+        height: 200px;
+        width: 200px;
+        background-color: aqua;
+        /* overflow: hidden; */
+        /* overflow: scroll; */
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      #d2 {
+        width: 500px;
+        background-color: gold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="d1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident,
+      volupsi maxime fugiat totam ducimus, quibusdam. Necessitatibus non ad sint
+      nobis debitis eligendi quis quia tempore amet
+      <div id="d2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
+        maiores eveniet sapiente, laboriosam iusto minus praesentium, ea dolor
+        reprehender
+      </div>
+      dolorum, suscipit dolores incidunt saepe perferendis at ipsa voluptatum
+      veritatis dolor
+    </div>
+  </body>
+</html>

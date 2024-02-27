@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>行内块的幽灵空白问题</title>
+    <style>
+      div {
+        background-color: burlywood;
+        width: 300px;
+        /* 解决方案三 */
+        font-size: 0;
+      }
+      img {
+        /* 解决方案一 图片后有文字时 */
+        /* vertical-align: bottom; */
+        /* 解决方案二 图片后没有文字时 */
+        /* display: block; */
+      }
+    </style>
+  </head>
+  <body>
+    <div><img src="../../images/小星星.png" alt="" /></div>
+  </body>
+</html>

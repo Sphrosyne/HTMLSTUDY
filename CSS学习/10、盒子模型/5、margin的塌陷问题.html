@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>margin塌陷问题</title>
+    <style>
+      .outer {
+        height: 200px;
+        width: 200px;
+        background-color: gray;
+        /* border: 1px solid red; */
+        /* padding: 1px; */
+        overflow: hidden;
+      }
+      .inner1 {
+        height: 50px;
+        width: 50px;
+        background-color: orange;
+        margin-top: 20px;
+      }
+      .inner2 {
+        height: 50px;
+        width: 50px;
+        background-color: deepskyblue;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <div class="inner1"></div>
+      <div class="inner2"></div>
+    </div>
+  </body>
+</html>
