@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>相对定位</title>
+    <style>
+      .container {
+        width: 700px;
+        height: 650px;
+        background-color: gray;
+        padding-left: 10px;
+        padding-top: 10px;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: gold;
+        /* 相对对位*/
+        /* 相对于自己原来的位置 不会脱离文档流 */
+        /* left和right不能一起设置 */
+        /* top和bottom不能一起设置 */
+        /* 不推荐和margin和float一起使用 */
+        position: relative;
+        left: 100px;
+      }
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+    </div>
+  </body>
+</html>

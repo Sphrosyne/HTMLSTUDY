@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>绝对定位</title>
+    <style>
+      .container {
+        width: 700px;
+        height: 650px;
+        background-color: gray;
+        padding-left: 10px;
+        padding-top: 10px;
+        /* 结合相对定位使用 */
+        position: relative;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: gold;
+        /* 脱离文档流 */
+        /* 绝对定位的参考点是参考它的包含块 */
+        /* 什么是包含块 
+        1、对于没有脱离文档流的元素，包含块就是父元素
+        2、对于脱离文档流的元素，包含块就是第一个拥有定位属性的祖先元素
+        （如果所有祖先都没有定位，那么包含块就是整个页面）
+        */
+        position: absolute;
+        left: 10px;
+        top: 210px;
+      }
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+
+      /* 使用效果展示 */
+      .container:hover .box2 {
+        left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+    </div>
+  </body>
+</html>

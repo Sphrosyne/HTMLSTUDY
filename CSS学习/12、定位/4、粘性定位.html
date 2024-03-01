@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>粘性定位</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+      .page-header {
+        height: 60px;
+        text-align: center;
+        background-color: gold;
+        line-height: 60px;
+      }
+      .first {
+        background-color: aqua;
+        font-size: 40px;
+        height: 56px;
+        /* 粘性定位
+        1、不会脱离文档流
+        参考点：离它最近的一个拥有“滚动机制的祖先”，即使这个祖先不是最近的真实可滚动祖先(overflow:scroll)
+        粘性定位和相对定位的特点基本一致，不同的是粘性定位可以在元素到达某个位置时将其固定
+        */
+        position: sticky;
+        top: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-header">标题</div>
+    <div class="content">
+      <div class="first">A</div>
+      <h4>A1</h4>
+      <h4>A2</h4>
+      <h4>A3</h4>
+      <h4>A4</h4>
+      <h4>A5</h4>
+      <h4>A6</h4>
+      <h4>A7</h4>
+      <h4>A8</h4>
+      <div class="first">B</div>
+      <h4>B1</h4>
+      <h4>B2</h4>
+      <h4>B3</h4>
+      <h4>B4</h4>
+      <h4>B5</h4>
+      <h4>B6</h4>
+      <h4>B7</h4>
+      <h4>B8</h4>
+      <div class="first">C</div>
+      <h4>C1</h4>
+      <h4>C2</h4>
+      <h4>C3</h4>
+      <h4>C4</h4>
+      <h4>C5</h4>
+      <h4>C6</h4>
+      <h4>C7</h4>
+      <h4>C8</h4>
+    </div>
+  </body>
+</html>
